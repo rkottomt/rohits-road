@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#8fd94f" />
+    <title>Rohit's Road</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%238fd94f'/><rect x='9' y='12' width='14' height='11' fill='%23fff'/><rect x='13' y='7' width='9' height='7' fill='%23fff'/><rect x='22' y='9' width='5' height='3' fill='%23f5a623'/><rect x='15' y='4' width='5' height='4' fill='%23e4483a'/></svg>"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+
+      <div id="hud">
+        <div id="score-wrap">
+          <div id="score">0</div>
+          <div id="best">BEST 0</div>
+        </div>
+
+        <div id="coins">
+          <span id="coin-icon"></span><span id="coin-count">0</span>
+        </div>
+
+        <button id="sound" type="button" aria-label="Toggle sound">
+          <span id="sound-glyph">♪</span>
+        </button>
+      </div>
+
+      <div id="title-screen" class="overlay">
+        <div class="panel">
+          <h1 class="logo">
+            <span class="logo-line logo-top">ROHIT'S</span>
+            <span class="logo-line logo-bottom">ROAD</span>
+          </h1>
+          <p class="hint">
+            <span class="keycap">↑</span><span class="keycap">←</span
+            ><span class="keycap">↓</span><span class="keycap">→</span> or swipe
+          </p>
+          <div class="cta">TAP TO PLAY</div>
+        </div>
+      </div>
+
+      <div id="over-screen" class="overlay hidden">
+        <div class="panel">
+          <div class="over-title">SQUISHED!</div>
+          <div class="over-reason" id="over-reason"></div>
+          <div class="over-stats">
+            <div class="stat">
+              <div class="stat-label">SCORE</div>
+              <div class="stat-value" id="final-score">0</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">BEST</div>
+              <div class="stat-value" id="final-best">0</div>
+            </div>
+          </div>
+          <div class="cta">TAP TO RETRY</div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
